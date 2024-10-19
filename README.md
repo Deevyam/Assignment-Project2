@@ -69,7 +69,7 @@ The system retrieves weather data from the OpenWeatherMap API. You will need to 
 1. **Download or Clone the Repository**:
    ```bash
    git copy 
-   cd weather-monitoring-system
+   cd weatherApp
    cd backend npm i
    node index.js
    cd frontend npm i
