@@ -39,10 +39,16 @@ The system retrieves weather data from the OpenWeatherMap API. You will need to 
 
 ### 2. Daily Aggregations
 
-- For each city, the system calculates the following daily data:
-  - **Average Temperature**
-  - **Maximum and Minimum Temperature**
-  - **Dominant Weather Condition** (based on frequency of each condition)
+Average Temperature: Calculates the mean temperature for each day.
+Maximum and Minimum Temperatures: Identifies the highest and lowest recorded temperatures for the day.
+Dominant Weather Condition: Determines the most frequently occurring weather condition (e.g., sunny, cloudy).
+Workflow:
+Data Fetching: The service retrieves weather data for a specified city or location from an external API.
+Aggregation: It processes the raw data to calculate daily summaries for each metric.
+Storage: The aggregated summaries are stored in a MongoDB collection for easy retrieval and further analysis.
+Usage:
+Manual Trigger: The aggregation can be triggered manually via an API endpoint (e.g., /api/weather/aggregate).
+Scheduled Automation: It can be set up to run automatically at regular intervals (e.g., daily) using a cron job.
 
 ### 3. Alerts
 
